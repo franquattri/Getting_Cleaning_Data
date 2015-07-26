@@ -1,0 +1,18 @@
+---
+title: "README"
+output: html_document
+---
+
+In this folder, you will find all needed material to start your experimentation on data related to wearable technology. 
+
+- The data have already been massaged up to the generation of a tidy dataset saved as tidy_dataset.txt, which can be used for further research 
+
+- To access the row data, download the zipped file by following this [link](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) and get familiar with the datasets by reading [here](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones#)
+
+- The unzipped folder of the data can be found for your convenience under this same folder. Do not change the original data sets.
+
+- To get to see the coding please open the run_analysis.R file. To experiment on your own, make sure that your directory contains the downloaded data
+
+- Step-by-step explanation of the coding has been provided in the R file. Further explanation has been provided in the annexed CodeBook.md
+
+- The R processing has been conducted on a Windows machine, R version 3.2.1.

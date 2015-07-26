@@ -1,0 +1,48 @@
+---
+title: "CodeBook"
+output: html_document
+---
+
+This code book describes the variables, the data, and the performed transformation to clean up the data. 
+
+The data sets have been retrieved from 
+[this zipped file](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) and deal with wearable computing. 
+
+
+In particular, the data have been retrieved from accelerometers from the 
+Samsung Galaxy S smartphone, as described [here](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
+
+The data have been manipulated as it follows: 
+
+- One big dataset of training and test data has been created by merging separate files. For this task several data sets have been merged: 
+
+```
+train/X_train.txt, test/X_test.txt, train/subject_train.txt, test/subject_test.txt, train/y_train.txt and test/y_test.txt
+```
+At this level, a first clarification of the variables'names has been made.
+
+This has been made possible by using indications provided under the data set features_info.txt. 
+Hence, "subject", "activities" and "raw_names" have been generated from the binary binding of the single datasets, which have been later merged into one 
+big dataset called "dataset"
+
+The following (containing more than 10,000 observations and more than 500 variables) has been re-printed in a more user-friendly dataset called "fancy_dataset" , through dplyr. This dataset has been then adopted for the next steps. Temporary data can be deleted at the end of the tasks to save memory.
+ 
+
+- For each measurement, only the mean and standard deviation have been extracted. Hints on mean and standard deviations can be found in the features.txt file in the 
+dataset. Through the grep() function, a new variable called features_parsed has been generated which just contains the measurements for mean and sd.
+
+- The levels aka names of the activities data set have been retrieved. They include: 
+
+```
+walking, walkingupstairs, walkingdownstairs, sitting, standing, laying
+```
+
+An hint on the class levels with their activity names is provided under the file activity_labels.txt. The unique() function has been adopted to avoid duplicates.
+
+- The variables or column names have been reassigned by making them more descriptive. For this task, names have been re-assigned (through the gsub() function) as based on the list provided under features.txt and further research to clarify the abbreviations. The names of the variables are more readeable but also very long.
+
+- A tidy dataset (only 180 observations) out of the mean of each variable for each activity and each subject has been generated (through the aggregate() function) and saved as tiny_dataset.txt.
+
+
+
+
