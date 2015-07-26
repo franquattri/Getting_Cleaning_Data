@@ -3,6 +3,8 @@ title: "README"
 output: html_document
 ---
 
+### README
+
 In this folder, you will find all needed material to start your experimentation on data related to wearable technology. 
 
 - The data have already been massaged up to the generation of a tidy dataset saved as tidy_dataset.txt, which can be used for further research 
